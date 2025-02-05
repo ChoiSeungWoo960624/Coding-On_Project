@@ -3,14 +3,15 @@
 
 from tkinter import *
 from bs4 import BeautifulSoup
-import requests
+import requests,time
 
 def get_cost():
     #실시간 전기요금 가져오기.
-    url="https://online.kepco.co.kr/COM003D00"
+    url="https://online.kepco.co.kr/"
     res=requests.get(url)
     soup=BeautifulSoup(res.text, "html.parser")
-    PRP=soup.select_one("#mf_wfm_layout_mainPwrReservePercent")
-    print(PRP)
+    time.sleep(2)
+    prp=soup.select_one("#mf_wfm_layout_mainPwrReservePercent")
+    print(prp)
 
 get_cost()
