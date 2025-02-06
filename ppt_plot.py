@@ -1,3 +1,6 @@
+# 이 곳은 PPT에 올라갈 자료들을 시각화 하는 파일입니다.
+# 함부로 수정하지마세요~
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib import font_manager
