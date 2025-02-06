@@ -1,5 +1,5 @@
-# 응용프로그램으로 쓰일 스크립트입니다.
-# 함부로 수정하지 말고 Test.py 등으로 한번 테스트 한 뒤 merge 해주세요.
+# 모듈로 쓰일 스크립트입니다.
+# 함수 기능만 만들어주세요. 실제 프로그램은 다른 py에서 구현할 예정입니다.
 
 import requests
 import pandas as pd
@@ -32,6 +32,8 @@ def get_cost():  #실시간 전기요금을 가져오는 함수
     print(f"7일간 평균 최소요금 : {avg_min}")
     print(f"오늘 평균 요금 : {avg_today}")
 
+def save_bill(): # 최대 목표 요금 을 설정하는 함수 (한달동안 최대 얼마의 요금을 생각하는지...)
+    pass
 
 
 def window(): # tkinter로 창을 띄우는 함수
@@ -56,7 +58,7 @@ def window(): # tkinter로 창을 띄우는 함수
     root.title("SmartElectricBill")
     topframe=tk.Frame(root)
     topframe.pack()
-    setmony_lab=tk.Label(topframe, text="최대사용요금 설정")
+    setmony_lab=tk.Label(topframe, text="경고요금 설정")
     setmoney_ent=tk.Entry(topframe,width=20,background="lightcyan")
     setmoney_btn=tk.Button(topframe, text="확인",command=add_red_line)
     setmony_lab.grid(row=0,column=0,pady=1,sticky='w')
