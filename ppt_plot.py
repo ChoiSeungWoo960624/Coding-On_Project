@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib import font_manager
 
+
 # 한글폰트 적용
 path = 'C:\\Windows\\Fonts\\malgun.ttf'  # 맑은 고딕 폰트 경로
 font = font_manager.FontProperties(fname=path).get_name()
@@ -23,6 +24,7 @@ df['월별']=df['구분'].astype(str).str[:6]
 
 month_avg_bill=df.groupby('월별')['평균'].mean()
 print(month_avg_bill)
+
 
 
 
